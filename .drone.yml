@@ -16,4 +16,11 @@ steps:
     image: golang
     commands:
       - go get
-      - go build
+      - go build -o output
+      - chmod +x output
+
+  - name: run
+    image: golang
+    commands:
+      - go get
+      - go test

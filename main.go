@@ -1,11 +1,9 @@
 package main
 
 import (
-	"flag"
 	"fmt"
 	"log"
 	"net/http"
-	"os"
 )
 
 // HelloWorld for hello world
@@ -32,26 +30,5 @@ func pinger(port string) error {
 }
 
 func main() {
-	var port string
-	var ping bool
-	flag.StringVar(&port, "port", "8080", "server port")
-	flag.StringVar(&port, "p", "8080", "server port")
-	flag.BoolVar(&ping, "ping", false, "check server live")
-	flag.Parse()
-
-	if p, ok := os.LookupEnv("PORT"); ok {
-		port = p
-	}
-
-	if ping {
-		if err := pinger(port); err != nil {
-			log.Printf("ping server error: %v\n", err)
-		}
-
-		return
-	}
-
-	http.HandleFunc("/", handler)
-	log.Println("http server run on " + port + " port")
-	log.Fatal(http.ListenAndServe(":"+port, nil))
+	fmt.Println("hello World Drone Go")
 }
