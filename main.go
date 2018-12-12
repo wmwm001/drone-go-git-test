@@ -14,7 +14,7 @@ func HelloWorld() string {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	log.Println("http request.")
+	log.Println("http request....")
 	_, _ = fmt.Fprintf(w, "I love %s!", r.URL.Path[1:])
 }
 
