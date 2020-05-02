@@ -7,11 +7,11 @@ workspace:
 
 steps:
   - name: build
-   image: golang
-   commands:
-     - go get
-     - go build -o output
-     - chmod +x output
+    image: golang
+    commands:
+      - go get
+      - go build -o output
+      - chmod +x output
   - name: test
     image: golang
     commands:
