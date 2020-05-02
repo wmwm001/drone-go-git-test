@@ -1,9 +1,9 @@
 kind: pipeline
 name: default
 
-workspace:
+workspace:    
   base: /go
-  path: src/github.com/yourname/go-drone-hello-world
+  path: src/github.com/wmwm001/go-drone-hello-world
 
 steps:
   - name: report
@@ -32,7 +32,7 @@ steps:
 #      - chmod +x output
 #      - ./output
 
-volumes:
-  - name: reports
-    host:
-      path: /home/dev/work/src/github.com/cyantarek/drone-go-git-test/reports
+# volumes:
+#   - name: reports
+#     host:
+#       path: /home/dev/work/src/github.com/cyantarek/drone-go-git-test/reports
